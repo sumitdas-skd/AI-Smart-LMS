@@ -1,0 +1,106 @@
+INFO:     Will watch for changes in these directories: ['/Users/sumitkumardas/Desktop/Bleach/ai-smart-lms/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [14535] using StatReload
+INFO:     Started server process [14601]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52797 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52797 - "GET /auth/me HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:52802 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "OPTIONS /subjects/semesters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /subjects/semesters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "OPTIONS /subjects/?semester_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /subjects/?semester_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "OPTIONS /bookmarks/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /bookmarks/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "OPTIONS /notes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52802 - "GET /notes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52803 - "GET /subjects/semesters HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:52805 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52805 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52805 - "GET /subjects/semesters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52805 - "GET /subjects/?semester_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52805 - "GET /bookmarks/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52805 - "OPTIONS /admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52806 - "OPTIONS /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52807 - "OPTIONS /import/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52808 - "OPTIONS /subjects/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52807 - "GET /import/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52806 - "GET /admin/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52805 - "GET /admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52808 - "GET /subjects/ HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:52811 - "OPTIONS /admin/content/videos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52811 - "GET /admin/content/videos HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:52813 - "GET /subjects/semesters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52813 - "GET /subjects/?semester_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52813 - "GET /bookmarks/ HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:52815 - "GET /subjects/semesters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52815 - "GET /subjects/?semester_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52815 - "GET /bookmarks/ HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14601]
+INFO:     Stopping reloader process [14535]
