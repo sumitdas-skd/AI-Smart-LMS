@@ -52,6 +52,20 @@ app.include_router(upload.router)
 app.include_router(class_chat.router)
 app.include_router(ai_chat.router)
 
+@app.get("/seed")
+def trigger_seeding():
+    import seed_admin
+    import seed_subjects
+    import seed_exact_content
+    try:
+        seed_admin.seed_admin()
+        seed_subjects.seed()
+        seed_exact_content.run_seeder()
+        return {"msg": "Database successfully seeded built-in subjects and data!"}
+    except Exception as e:
+        import traceback
+        return {"error": str(e), "trace": traceback.format_exc()}
+
 @app.get("/")
 def read_root():
     return {"message": "AI Smart LMS API Running"}
