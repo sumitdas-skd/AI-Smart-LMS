@@ -54,10 +54,10 @@ app.include_router(ai_chat.router)
 
 @app.get("/seed")
 def trigger_seeding():
-    import seed_admin
-    import seed_subjects
-    import seed_exact_content
     try:
+        import seed_admin
+        import seed_subjects
+        import seed_exact_content
         seed_admin.seed_admin()
         seed_subjects.seed()
         seed_exact_content.run_seeder()

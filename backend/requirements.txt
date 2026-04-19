@@ -16,3 +16,4 @@ python-dotenv==1.0.0
 g4f==7.3.4
 requests>=2.31.0
 aiohttp>=3.9.0
+fpdf==1.7.2
