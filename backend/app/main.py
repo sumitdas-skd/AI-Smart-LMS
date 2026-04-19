@@ -21,6 +21,28 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="AI Smart LMS API")
 
+@app.on_event("startup")
+def check_and_seed_db():
+    from app.database import SessionLocal
+    from app.models.academic import Subject
+    db = SessionLocal()
+    try:
+        # If no subjects exist, the database is fresh/wiped. We should automatically seed it!
+        if db.query(Subject).count() == 0:
+            print("Detected empty database! Running automatic seeder...")
+            try:
+                import seed_admin
+                import seed_subjects
+                import seed_exact_content
+                seed_admin.seed_admin()
+                seed_subjects.seed()
+                seed_exact_content.run_seeder()
+                print("Automatic seeding completed successfully.")
+            except Exception as e:
+                print(f"Failed to auto-seed: {e}")
+    finally:
+        db.close()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
