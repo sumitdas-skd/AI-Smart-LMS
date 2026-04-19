@@ -20,17 +20,21 @@ def register(user_in: UserCreate, db: Session = Depends(get_db)):
     if user:
         raise HTTPException(status_code=400, detail="Email already registered")
     
-    hashed_pass = get_password_hash(user_in.password)
-    new_user = User(
-        full_name=user_in.full_name,
-        email=user_in.email,
-        hashed_password=hashed_pass,
-        role=user_in.role
-    )
-    db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
-    return new_user
+    try:
+        hashed_pass = get_password_hash(user_in.password)
+        new_user = User(
+            full_name=user_in.full_name,
+            email=user_in.email,
+            hashed_password=hashed_pass,
+            role=user_in.role
+        )
+        db.add(new_user)
+        db.commit()
+        db.refresh(new_user)
+        return new_user
+    except Exception as e:
+        import traceback
+        raise HTTPException(status_code=500, detail=str(traceback.format_exc()))
 
 @router.post("/login", response_model=Token)
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
