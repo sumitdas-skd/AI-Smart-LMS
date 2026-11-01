@@ -28,10 +28,12 @@ logger = logging.getLogger(__name__)
 # Default prominent company sources to seed on initial run
 DEFAULT_COMPANY_SOURCES = [
     {"type": "greenhouse", "slug": "stripe", "company_name": "Stripe"},
-    {"type": "greenhouse", "slug": "github", "company_name": "GitHub"},
-    {"type": "lever", "slug": "figma", "company_name": "Figma"},
-    {"type": "ashby", "slug": "linear", "company_name": "Linear"},
+    {"type": "greenhouse", "slug": "cloudflare", "company_name": "Cloudflare"},
+    {"type": "greenhouse", "slug": "gitlab", "company_name": "GitLab"},
+    {"type": "greenhouse", "slug": "figma", "company_name": "Figma"},
     {"type": "ashby", "slug": "notion", "company_name": "Notion"},
+    {"type": "ashby", "slug": "linear", "company_name": "Linear"},
+    {"type": "ashby", "slug": "openai", "company_name": "OpenAI"},
 ]
 
 
