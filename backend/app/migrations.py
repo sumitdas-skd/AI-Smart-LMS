@@ -47,27 +47,27 @@ def run_migrations():
         "announcements": [
             ("priority", "VARCHAR", "'general'"),
             ("subject_id", "INTEGER", "NULL"),
-            ("pinned", "BOOLEAN", "0"),
+            ("pinned", "BOOLEAN", "FALSE"),
             ("expires_at", "TIMESTAMP", "NULL"),
         ]
     }
 
-    with engine.begin() as conn:
-        for table_name, cols in columns_to_ensure.items():
-            if table_name in existing_tables:
-                existing_cols = {col["name"] for col in inspector.get_columns(table_name)}
-                for col_name, col_type, default_val in cols:
-                    if col_name not in existing_cols:
-                        logger.info(f"Adding missing column '{col_name}' ({col_type}) to table '{table_name}'...")
-                        if default_val == "NULL":
-                            stmt = text(f"ALTER TABLE {table_name} ADD COLUMN {col_name} {col_type}")
-                        else:
-                            stmt = text(f"ALTER TABLE {table_name} ADD COLUMN {col_name} {col_type} DEFAULT {default_val}")
-                        try:
+    for table_name, cols in columns_to_ensure.items():
+        if table_name in existing_tables:
+            existing_cols = {col["name"] for col in inspector.get_columns(table_name)}
+            for col_name, col_type, default_val in cols:
+                if col_name not in existing_cols:
+                    logger.info(f"Adding missing column '{col_name}' ({col_type}) to table '{table_name}'...")
+                    if default_val == "NULL":
+                        stmt = text(f"ALTER TABLE {table_name} ADD COLUMN {col_name} {col_type}")
+                    else:
+                        stmt = text(f"ALTER TABLE {table_name} ADD COLUMN {col_name} {col_type} DEFAULT {default_val}")
+                    try:
+                        with engine.begin() as conn:
                             conn.execute(stmt)
-                            logger.info(f"Successfully added '{col_name}' to '{table_name}'.")
-                        except Exception as e:
-                            logger.warning(f"Could not add column '{col_name}' to '{table_name}': {e}")
+                        logger.info(f"Successfully added '{col_name}' to '{table_name}'.")
+                    except Exception as e:
+                        logger.warning(f"Could not add column '{col_name}' to '{table_name}': {e}")
                             
     logger.info("Database migration check completed successfully.")
 
